@@ -29,7 +29,7 @@ const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-container");
 
 function loadSong(src) {
-    audio.src = src || `https://firebasestorage.googleapis.com/v0/b/webai-54992.appspot.com/o/uoc-mo-cua-me-the-heroes-version-100919.mp3?alt=media&token=bccb240f-ac04-4350-8484-b6b360d48041`;
+    audio.src = src || `https://storage.googleapis.com/webai-54992.appspot.com/uoc-mo-cua-me.mp3`;
 }
 
 // Play song
