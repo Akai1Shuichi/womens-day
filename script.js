@@ -22,14 +22,14 @@ window.onclick = function(event) {
 }
 
 /** MUSIC */
-const musicContainer = document.getElementById("music-container");
+const musicContainer = document.getElementById("musicContainer");
 const playBtn = document.getElementById("play");
 const audio = document.getElementById("audio");
 const progress = document.getElementById("progress");
 const progressContainer = document.getElementById("progress-container");
 
-function loadSong() {
-    audio.src = `https://cherryradio.com.au/cdn1/2021/07/100919/320/uoc-mo-cua-me-the-heroes-version-100919.mp3`;
+function loadSong(src) {
+    audio.src = src || `https://firebasestorage.googleapis.com/v0/b/webai-54992.appspot.com/o/uoc-mo-cua-me-the-heroes-version-100919.mp3?alt=media&token=bccb240f-ac04-4350-8484-b6b360d48041`;
 }
 
 // Play song
@@ -80,11 +80,47 @@ playBtn.addEventListener("click", () => {
     }
 });
 
-window.onload = function() {
+// Chuyển đổi màu hex sang RGB
+function hexToRgb(hex) {
+    let r = parseInt(hex.slice(1, 3), 16);
+    let g = parseInt(hex.slice(3, 5), 16);
+    let b = parseInt(hex.slice(5, 7), 16);
+    return `rgba(${r}, ${g}, ${b}, 0.5)`; // Giảm độ trong suốt
+}
+
+function initStyle() {
     document.getElementById('titleHeader').innerText = 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
     document.getElementById('contentHeader').innerText = 'Chúc mừng Ngày Phụ nữ Việt Nam!\nChúc bạn luôn vui vẻ, hạnh phúc và thành công!';
-    document.documentElement.style.setProperty('--primary-color', '#ee5286');
     loadSong();
+}
+
+window.onload = async function() {
+    const headerContainer = document.getElementById('headerContainer');
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+    if (!id) {
+        initStyle();
+    }
+    else {
+        try {
+            const response = await fetch(`http://127.0.0.1:5000/api/women/${id}`);
+            
+            if (!response.ok) {
+                throw new Error('Không tìm thấy dữ liệu cho ID này.');
+            }
+            
+            const {data} = await response.json();
+            document.getElementById('titleHeader').innerText = data?.tieuDe || 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
+            document.getElementById('contentHeader').innerText = data?.message || 'Chúc mừng Ngày Phụ nữ Việt Nam!\nChúc bạn luôn vui vẻ, hạnh phúc và thành công!';
+            document.documentElement.style.setProperty('--primary-color', data?.color || '#ee5286');
+            document.documentElement.style.setProperty('--secondary-color', hexToRgb(data?.color ||"#ee5286"));
+            loadSong(data?.musicLink);
+        } catch (error) {
+            initStyle();
+        }
+    }
+    headerContainer.style.display = 'block';   
+     
 };
 
 // Time/song update

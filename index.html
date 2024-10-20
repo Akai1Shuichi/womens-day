@@ -13,9 +13,9 @@
   
 <body>
     <div class="night"></div>
-    <div class="header">
+    <div class="header" id="headerContainer">
         <p id="titleHeader"></p>
-        <div class="music-container" id="music-container">
+        <div class="music-container" id="musicContainer">
             <button id="play" class="action-btn">
                 <i class="fas fa-play"></i>
             </button>
@@ -23,10 +23,10 @@
                 <div class="progress" id="progress"></div>
             </div>
         </div>
-        <div id="openModal" class="card-icon">
+        <div class="card-icon" id="openModal">
             <i class="fas fa-envelope fa-lg"></i>
         </div>
-        <p class="tooltip">“ Ấn để mở thiệp ”</p>
+        <p class="tooltip" id="toolTip">“ Ấn để mở thiệp ”</p>
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
@@ -333,7 +333,7 @@
       </div>
     </div>
     <a href="register.html" class="register-button">Tạo thiệp</a>
-    <audio id="audio" src="https://cherryradio.com.au/cdn1/2021/07/100919/320/uoc-mo-cua-me-the-heroes-version-100919.mp3"></audio>
+    <audio id="audio" src="https://drive.google.com/file/d/1uLezTpfWpOdhTYDLcTzQDDDmLBIqkV3Z/view?usp=sharing"></audio>
     <script src="script.js"></script>
   </body>
 

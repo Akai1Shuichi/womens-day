@@ -17,6 +17,7 @@ html {
 
 :root {
   --primary-color: #ee5286;
+  --secondary-color: rgba(238, 82, 134, 0.7);
   --dark-color: #000;
 }
 
@@ -45,6 +46,7 @@ body {
 }
 
 .header {
+  display: none;
   color: white;
   font-size: 2rem;
   position: fixed;
@@ -75,7 +77,7 @@ body {
 }
 
 .progress {
-  background-color: #fe8daa;
+  background-color: var(--secondary-color);
   border-radius: 5px;
   height: 100%;
   width: 0%;
