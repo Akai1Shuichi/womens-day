@@ -6,7 +6,8 @@ const musicList = {
     "ganh-me": "Gánh mẹ",
     "con-no-me": "Con nợ mẹ",
     "chua-bao-gio-me": "Chưa bao giờ mẹ kể",
-    "falling-you": "Falling You"
+    "falling-you": "Falling You",
+    "oi-mat-riu": "Ôi Mất Rìu" 
 }
 const formDataInit = {
     tieuDe: "Chúc Mừng Ngày Phụ nữ Việt Nam 20/10",
