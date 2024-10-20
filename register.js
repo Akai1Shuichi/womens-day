@@ -26,7 +26,7 @@ document.getElementById("registerForm").addEventListener("submit",async function
     }
 
     try {
-        const response = await fetch('http://127.0.0.1:5000/api/women/', {
+        const response = await fetch('https://us-central1-webai-54992.cloudfunctions.net/women_day_ai?', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

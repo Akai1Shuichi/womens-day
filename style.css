@@ -67,11 +67,20 @@ body {
   justify-content: center;
 }
 
+.progress-wrapper {
+  width: 100%;
+  text-align: left;
+}
+
+#progressTitle {
+  font-size: 1rem;
+}
+
 .progress-container {
   background: #fff;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px 0;
+  margin-bottom: 10px;
   height: 4px;
   width: 100%;
 }
@@ -85,6 +94,8 @@ body {
 }
 
 .action-btn {
+  position: relative;
+  top: 8px;
   background: transparent;
   border: 0;
   color: #dfdbdf;
@@ -96,6 +107,7 @@ body {
 
 /* Thiết kế modal */
 .card-icon {
+  margin-top: 10px;
   display: block;
   cursor: pointer;
   transition: transform 0.3s ease;

@@ -1,3 +1,12 @@
+const musicList = {
+    "uoc-mo-cua-me": "Ước mơ của mẹ",
+    "nhat-ky-cua-me": "Nhật ký của mẹ",
+    "gap-me-trong-mo": "Gặp mẹ trong mơ",
+    "ganh-me": "Gánh mẹ",
+    "con-no-me": "Con nợ mẹ",
+    "chua-bao-gio-me": "Chưa bao giờ mẹ kể"
+}
+
 /** MODAL */
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("openModal");
@@ -89,6 +98,7 @@ function hexToRgb(hex) {
 }
 
 function initStyle() {
+    document.getElementById('progressTitle').innerText = 'Ước mơ của mẹ';
     document.getElementById('titleHeader').innerText = 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
     document.getElementById('contentHeader').innerText = 'Chúc mừng Ngày Phụ nữ Việt Nam!\nChúc bạn luôn vui vẻ, hạnh phúc và thành công!';
     loadSong();
@@ -103,7 +113,7 @@ window.onload = async function() {
     }
     else {
         try {
-            const response = await fetch(`http://127.0.0.1:5000/api/women/${id}`);
+            const response = await fetch(`https://us-central1-webai-54992.cloudfunctions.net/women_day_ai?id=${id}`);
             
             if (!response.ok) {
                 throw new Error('Không tìm thấy dữ liệu cho ID này.');

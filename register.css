@@ -11,6 +11,13 @@
     gap: 5px;
 }
 
+
+.submit-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+
 .result-container {
     margin-top: 20px;
     font-weight: 600;

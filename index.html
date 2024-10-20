@@ -14,13 +14,16 @@
 <body>
     <div class="night"></div>
     <div class="header" id="headerContainer">
-        <p id="titleHeader"></p>
+        <h4 id="titleHeader"></h4>
         <div class="music-container" id="musicContainer">
             <button id="play" class="action-btn">
                 <i class="fas fa-play"></i>
             </button>
-            <div class="progress-container" id="progress-container">
+            <div class="progress-wrapper">
+              <span id="progressTitle"></span>
+              <div class="progress-container" id="progress-container">
                 <div class="progress" id="progress"></div>
+            </div>
             </div>
         </div>
         <div class="card-icon" id="openModal">
