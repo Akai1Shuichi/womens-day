@@ -142,6 +142,7 @@ body {
   position: relative;
   max-width: 600px;
   min-width: 300px;
+  overflow: auto;
 }
 
 .modal-content p {
@@ -1489,14 +1490,4 @@ body {
 .container * {
   -webkit-animation-play-state: paused !important;
           animation-play-state: paused !important;
-}
-
-@media (max-width: 768px) {
-  .flowers {
-      transform: scale(0.7);
-  }
-
-  .modal-content {
-    margin: 30% auto;
-  }
 }
