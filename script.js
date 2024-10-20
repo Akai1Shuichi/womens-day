@@ -1,12 +1,3 @@
-const musicList = {
-    "uoc-mo-cua-me": "Ước mơ của mẹ",
-    "nhat-ky-cua-me": "Nhật ký của mẹ",
-    "gap-me-trong-mo": "Gặp mẹ trong mơ",
-    "ganh-me": "Gánh mẹ",
-    "con-no-me": "Con nợ mẹ",
-    "chua-bao-gio-me": "Chưa bao giờ mẹ kể"
-}
-
 /** MODAL */
 var modal = document.getElementById("myModal");
 var btn = document.getElementById("openModal");
@@ -120,8 +111,7 @@ window.onload = async function() {
             }
             
             const {data} = await response.json();
-            const fileNameMusic = data?.musicLink?.split('/')?.pop()?.split('.')[0];
-            document.getElementById('progressTitle').innerText = musicList[fileNameMusic] || 'Ước mơ của mẹ';
+            document.getElementById('progressTitle').innerText = data?.musicName || 'Ước mơ của mẹ';
             document.getElementById('titleHeader').innerText = data?.tieuDe || 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
             document.getElementById('contentHeader').innerText = data?.message || '🌹💐 Chúc những người phụ nữ  Việt Nam luôn xinh đẹp\nluôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️';
             document.documentElement.style.setProperty('--primary-color', data?.color || '#ee5286');

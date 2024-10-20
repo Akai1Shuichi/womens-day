@@ -1,9 +1,18 @@
 const storage_url = 'https://storage.googleapis.com/webai-54992.appspot.com/';
+const musicList = {
+    "uoc-mo-cua-me": "Ước mơ của mẹ",
+    "nhat-ky-cua-me": "Nhật ký của mẹ",
+    "gap-me-trong-mo": "Gặp mẹ trong mơ",
+    "ganh-me": "Gánh mẹ",
+    "con-no-me": "Con nợ mẹ",
+    "chua-bao-gio-me": "Chưa bao giờ mẹ kể"
+}
 const formDataInit = {
     tieuDe: "Chúc Mừng Ngày Phụ nữ Việt Nam 20/10",
     color: "#ee5286",
     musicLink: "https://storage.googleapis.com/webai-54992.appspot.com/uoc-mo-cua-me.mp3",
-    message: "🌹 Chúc những người phụ nữ Việt Nam luôn xinh đẹp, luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️\""
+    message: "🌹 Chúc những người phụ nữ Việt Nam luôn xinh đẹp, luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️",
+    musicName: "Ước mơ của mẹ"
 }
 
 document.getElementById("registerForm").addEventListener("submit",async function(event) {
@@ -12,16 +21,19 @@ document.getElementById("registerForm").addEventListener("submit",async function
     const colorElement = document.getElementById('color');
     const musicLinkElement = document.getElementById('musicLink');
     const messageElement = document.getElementById('message');
+    const fileMusicName = musicLinkElement?.value?.split('/')?.pop()?.split('.')[0];
+
 
     const formData = {
         tieuDe: tieuDeElement.value,
         color: colorElement.value,
         musicLink: musicLinkElement.value,
-        message: messageElement.value
+        message: messageElement.value,
+        musicName: musicList[fileMusicName],
     };
 
-    if (formDataInit.tieuDe == formData.tieuDe && formDataInit.color == formData.color && formDataInit.musicLink == formData.musicLink && formDataInit.message == formData.message) {
-        alert('Nội dung giống thiệp gốc .\n Nếu muốn tạo mới hãy thay đổi nội dung .')
+    if (formDataInit.tieuDe == formData.tieuDe && formDataInit.color == formData.color && formDataInit.musicLink == formData.musicLink && formDataInit.message == formData.message && formDataInit.musicName == formData.musicName) {
+        alert('Nội dung giống thiệp gốc .\nNếu muốn tạo mới hãy thay đổi nội dung .')
         return;
     }
 
