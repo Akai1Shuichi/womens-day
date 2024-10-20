@@ -1,0 +1,13 @@
+#registerForm {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+}
+
+form input {
+    margin-bottom: 20px;
+}
+
+form button {
+    margin-top: 20px;
+} 

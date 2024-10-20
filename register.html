@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <h1>Đăng ký thiệp chúc mừng</h1>
+    <form id="registerForm">
+        <label for="tieuDe">Nhập tiêu đề:</label>
+        <input type="tieuDe" id="tieuDe" name="tieuDe" value="Chúc Mừng Ngày Phụ nữ Việt Nam 20/10" required>
+
+        <label for="color">Chọn màu hoa :</label>
+        <input type="color" id="color" name="color" value="#ee5286" required>
+
+        <label for="musicLink">Nhập link nhạc:</label>
+        <input type="url" id="musicLink" name="musicLink" value="https://cherryradio.com.au/cdn1/2021/07/100919/320/uoc-mo-cua-me-the-heroes-version-100919.mp3" required>
+        
+        <label for="message">Nội dung thư:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Chúc mừng Ngày Phụ nữ Việt Nam! Chúc bạn luôn vui vẻ, hạnh phúc và thành công!" required></textarea>
+        <button type="submit">Gửi</button>
+    </form>
+
+    <script src="register.js"></script>
+</body>
+</html>
