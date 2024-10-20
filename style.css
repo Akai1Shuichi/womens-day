@@ -68,7 +68,7 @@ body {
 }
 
 .progress-wrapper {
-  width: 100%;
+  width: 69%;
   text-align: left;
 }
 
@@ -140,6 +140,9 @@ body {
   border-radius: 10px;
   text-align: center;
   position: relative;
+  max-width: 600px;
+  min-width: 300px;
+  margin: 30% 15% auto;
 }
 
 .modal-content p {
@@ -171,7 +174,7 @@ body {
 /* Tao thiep */
 .register-button {
   position: absolute;
-  bottom: 20px; 
+  bottom: 40px;
   left: 20px;   /* Khoảng cách từ trái */
   padding: 10px 20px;
   background-color: #257ad5; /* Màu nền */
