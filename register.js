@@ -38,7 +38,7 @@ document.getElementById("registerForm").addEventListener("submit",async function
             const result = await response.json();
             const resultLabel = document.getElementById('result');
             resultLabel.style.display = 'block';
-            resultLabel.innerHTML = `<a href="http://127.0.0.1:5500?id=${result.id}" target="_blank">http://127.0.0.1:5500?id=${result.id}</a>`;
+            resultLabel.innerHTML = `<a href="https://womens-day-blond.vercel.app?id=${result.id}" target="_blank">https://womens-day-blond.vercel.app?id=${result.id}</a>`;
         } else {
             alert('Đã xảy ra lỗi khi gửi dữ liệu!');
         }
