@@ -174,7 +174,7 @@ body {
 /* Tao thiep */
 .register-button {
   position: absolute;
-  bottom: 40px;
+  bottom: 80px;
   left: 20px;   /* Khoảng cách từ trái */
   padding: 10px 20px;
   background-color: #257ad5; /* Màu nền */
