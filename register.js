@@ -21,7 +21,7 @@ const formDataInit = {
     musicName: "Ước mơ của mẹ"
 }
 
-document.getElementById("registerForm").addEventListener("submit",async function(event) {
+document.getElementById("submitButton").addEventListener("click",async function(event) {
     event.preventDefault();
     const tieuDeElement = document.getElementById('tieuDe');
     const colorElement = document.getElementById('color');
@@ -39,7 +39,7 @@ document.getElementById("registerForm").addEventListener("submit",async function
     };
 
     if (formDataInit.tieuDe == formData.tieuDe && formDataInit.color == formData.color && formDataInit.musicLink == formData.musicLink && formDataInit.message == formData.message && formDataInit.musicName == formData.musicName) {
-        alert('Nội dung giống thiệp gốc .\nNếu muốn tạo mới hãy thay đổi nội dung .')
+        alert('Nội dung giống thiệp gốc họăc vừa tạo .\nNếu muốn tạo mới hãy thay đổi nội dung .')
         return;
     }
 
@@ -57,6 +57,7 @@ document.getElementById("registerForm").addEventListener("submit",async function
             const resultLabel = document.getElementById('result');
             resultLabel.style.display = 'block';
             resultLabel.innerHTML = `<a href="https://womens-day-blond.vercel.app?id=${result.id}" target="_blank">https://womens-day-blond.vercel.app?id=${result.id}</a>`;
+            Object.assign(formDataInit, formData);
         } else {
             alert('Đã xảy ra lỗi khi gửi dữ liệu!');
         }
