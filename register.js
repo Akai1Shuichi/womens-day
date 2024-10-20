@@ -11,7 +11,10 @@ const musicList = {
     "say-yes-vi": "Say Yes VietNamese",
     "iu-la-day": "Iu là đây",
     "chi-can-co-nhau": "CHỈ CẦN CÓ NHAU",
-    "anh-nang-cua-anh": "Ánh nắng của anh"
+    "anh-nang-cua-anh": "Ánh nắng của anh",
+    "vo-tuyet-voi-nhat":"Vợ Tuyệt Vời Nhất",
+    "nu-cuoi-18-20":"nụ cười 18 20",
+    "co-hen-voi-thanh-xuan":"có hẹn với thanh xuân"
 }
 const formDataInit = {
     tieuDe: "Chúc Mừng Ngày Phụ nữ Việt Nam 20/10",
