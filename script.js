@@ -120,6 +120,8 @@ window.onload = async function() {
             }
             
             const {data} = await response.json();
+            const fileNameMusic = data?.musicLink?.split('/')?.pop()?.split('.')[0];
+            document.getElementById('progressTitle').innerText = musicList[fileNameMusic] || 'Ước mơ của mẹ';
             document.getElementById('titleHeader').innerText = data?.tieuDe || 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
             document.getElementById('contentHeader').innerText = data?.message || 'Chúc mừng Ngày Phụ nữ Việt Nam!\nChúc bạn luôn vui vẻ, hạnh phúc và thành công!';
             document.documentElement.style.setProperty('--primary-color', data?.color || '#ee5286');
