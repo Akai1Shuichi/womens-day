@@ -100,7 +100,7 @@ function hexToRgb(hex) {
 function initStyle() {
     document.getElementById('progressTitle').innerText = 'Ước mơ của mẹ';
     document.getElementById('titleHeader').innerText = 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
-    document.getElementById('contentHeader').innerText = 'Chúc mừng Ngày Phụ nữ Việt Nam!\nChúc bạn luôn vui vẻ, hạnh phúc và thành công!';
+    document.getElementById('contentHeader').innerText = '🌹 Chúc những người phụ nữ Việt Nam luôn xinh đẹp, luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️';
     loadSong();
 }
 
@@ -123,7 +123,7 @@ window.onload = async function() {
             const fileNameMusic = data?.musicLink?.split('/')?.pop()?.split('.')[0];
             document.getElementById('progressTitle').innerText = musicList[fileNameMusic] || 'Ước mơ của mẹ';
             document.getElementById('titleHeader').innerText = data?.tieuDe || 'Chúc Mừng Ngày Phụ nữ Việt Nam 20/10';
-            document.getElementById('contentHeader').innerText = data?.message || 'Chúc mừng Ngày Phụ nữ Việt Nam!\nChúc bạn luôn vui vẻ, hạnh phúc và thành công!';
+            document.getElementById('contentHeader').innerText = data?.message || '🌹💐 Chúc những người phụ nữ  Việt Nam luôn xinh đẹp\nluôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️';
             document.documentElement.style.setProperty('--primary-color', data?.color || '#ee5286');
             document.documentElement.style.setProperty('--secondary-color', hexToRgb(data?.color ||"#ee5286"));
             loadSong(data?.musicLink);

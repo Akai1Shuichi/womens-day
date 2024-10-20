@@ -3,7 +3,7 @@ const formDataInit = {
     tieuDe: "Chúc Mừng Ngày Phụ nữ Việt Nam 20/10",
     color: "#ee5286",
     musicLink: "https://storage.googleapis.com/webai-54992.appspot.com/uoc-mo-cua-me.mp3",
-    message: "Chúc mừng Ngày Phụ nữ Việt Nam! Chúc bạn luôn vui vẻ, hạnh phúc và thành công!\""
+    message: "🌹 Chúc những người phụ nữ Việt Nam luôn xinh đẹp, luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️\""
 }
 
 document.getElementById("registerForm").addEventListener("submit",async function(event) {
