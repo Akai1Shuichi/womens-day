@@ -60,7 +60,7 @@ document.getElementById("submitButton").addEventListener("click",async function(
             const result = await response.json();
             const resultLabel = document.getElementById('result');
             resultLabel.style.display = 'block';
-            resultLabel.innerHTML = `<a href="https://womens-day-blond.vercel.app?id=${result.id}" target="_blank">https://womens-day-blond.vercel.app?id=${result.id}</a>`;
+            resultLabel.innerHTML = `<a href="https://thiep-chuc-mung.vercel.app?id=${result.id}" target="_blank">https://thiep-chuc-mung.vercel.app?id=${result.id}</a>`;
             Object.assign(formDataInit, formData);
         } else {
             alert('Đã xảy ra lỗi khi gửi dữ liệu!');
