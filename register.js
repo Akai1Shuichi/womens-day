@@ -18,11 +18,11 @@ const musicList = {
     "hb-always-14": "Happy Birthday to You (Always 14)"
 }
 const formDataInit = {
-    tieuDe: "Chúc Mừng Ngày Phụ nữ Việt Nam 20/10",
+    tieuDe: "Happy Birth Day To You 🕯️",
     color: "#ee5286",
-    musicLink: "https://storage.googleapis.com/webai-54992.appspot.com/uoc-mo-cua-me.mp3",
-    message: "🌹 Chúc những người phụ nữ Việt Nam luôn xinh đẹp, luôn hạnh phúc và gặp nhiều may mắn trong cuộc sống ☘️",
-    musicName: "Ước mơ của mẹ"
+    musicLink: "https://storage.googleapis.com/webai-54992.appspot.com/hb-always-14.mp3",
+    message: "🌹💐 Chúc mừng sinh nhật bạn ☘️",
+    musicName: "Happy Birthday to You (Always 14)"
 }
 
 document.getElementById("submitButton").addEventListener("click",async function(event) {

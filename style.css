@@ -64,7 +64,6 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
 }
 
 .progress-wrapper {
@@ -175,7 +174,7 @@ body {
 /* Tao thiep */
 .register-button {
   position: absolute;
-  bottom: 50px;
+  bottom: 30px;
   left: 20px;   /* Khoảng cách từ trái */
   padding: 10px 20px;
   background-color: #257ad5; /* Màu nền */
