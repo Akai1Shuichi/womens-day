@@ -47,6 +47,8 @@ document.getElementById("submitButton").addEventListener("click",async function(
         return;
     }
 
+    formData.createdAt = new Date().toISOString();
+
     try {
         const response = await fetch('https://us-central1-webai-54992.cloudfunctions.net/women_day_ai', {
             method: 'POST',
