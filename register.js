@@ -15,7 +15,8 @@ const musicList = {
     "vo-tuyet-voi-nhat":"Vợ Tuyệt Vời Nhất",
     "nu-cuoi-18-20":"nụ cười 18 20",
     "co-hen-voi-thanh-xuan":"có hẹn với thanh xuân",
-    "hb-always-14": "Happy Birthday to You (Always 14)"
+    "hb-always-14": "Happy Birthday to You (Always 14)",
+    "cmsn-pdt": "Khúc hát chúc mừng sinh nhật"
 }
 const formDataInit = {
     tieuDe: "Happy Birthday To You 🕯️",
