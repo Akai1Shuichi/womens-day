@@ -18,7 +18,7 @@ const musicList = {
     "hb-always-14": "Happy Birthday to You (Always 14)"
 }
 const formDataInit = {
-    tieuDe: "Happy Birth Day To You 🕯️",
+    tieuDe: "Happy Birthday To You 🕯️",
     color: "#ee5286",
     musicLink: "https://storage.googleapis.com/webai-54992.appspot.com/hb-always-14.mp3",
     message: "🌹💐 Chúc mừng sinh nhật bạn ☘️",
