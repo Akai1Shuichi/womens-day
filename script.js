@@ -90,7 +90,7 @@ function hexToRgb(hex) {
 
 function initStyle() {
     document.getElementById('progressTitle').innerText = 'Happy Birthday to You (Always 14)';
-    document.getElementById('titleHeader').innerText = 'Happy Birth Day To You 🕯️';
+    document.getElementById('titleHeader').innerText = 'Happy Birthday To You 🕯️';
     document.getElementById('contentHeader').innerText = '🌹💐 Chúc mừng sinh nhật bạn ☘️';
     loadSong();
 }
@@ -112,7 +112,7 @@ window.onload = async function() {
             
             const {data} = await response.json();
             document.getElementById('progressTitle').innerText = data?.musicName || 'Happy Birthday to You (Always 14)';
-            document.getElementById('titleHeader').innerText = data?.tieuDe || 'Happy Birth Day To You 🕯️';
+            document.getElementById('titleHeader').innerText = data?.tieuDe || 'Happy Birthday To You 🕯️';
             document.getElementById('contentHeader').innerText = data?.message || '🌹💐 Chúc mừng sinh nhật bạn ☘️';
             document.documentElement.style.setProperty('--primary-color', data?.color || '#ee5286');
             document.documentElement.style.setProperty('--secondary-color', hexToRgb(data?.color ||"#ee5286"));
